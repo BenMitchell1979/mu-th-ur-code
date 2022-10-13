@@ -97,32 +97,91 @@ $(function () {
     });
 
     // Site Logs
+    // Storm - Loss Comms Log
     $("#21230315").on("click", function () {
         var msg = "Log Entry 21230315:1345hrs - Chief Administration Officer";
         server.emit('message', JSON.stringify({"content": msg, "from": 'Peter Garrett', "type": "text", "room": window.localStorage.getItem('my-room-ID')}));
+
         setTimeout(function() {
-        var msg = "While digging out new tunnels on Level 8, our team made a remarkable discovery! The ruins of some ancient Alien Civilization.";
+        var msg = "All communications are currently down due to damage caused by the Sand Storm on the Surface of LC1413.";
         server.emit('message', JSON.stringify({"content": msg, "from": '', "type": "text", "room": window.localStorage.getItem('my-room-ID')}));
         },3000);
+
         setTimeout(function() {
-        var msg = "We discovered something alive in the ruins. These spider like creatures emerged from these egg sack looking things.";
+        var msg = "Chief Michaels was injured while attempting to repair the Comm Array, he'll make a full recovery. ";
         server.emit('message', JSON.stringify({"content": msg, "from": '', "type": "text", "room": window.localStorage.getItem('my-room-ID')}));
         },8000);
+
+        setTimeout(function() {
+        var msg = "We will continue to transmit, though it isn't clear how much if any signal is making it to the orbital relay station. --END LOG ";
+        server.emit('message', JSON.stringify({"content": msg, "from": '', "type": "text", "room": window.localStorage.getItem('my-room-ID')}));
+        },11000);
     });
 
+    // Discovery of Site
     $("#21230323").on("click", function () {
-        var msgHeader = "Log Entry 21230315:1345hrs - Chief Administration Officer";
+        var msgHeader = "Log Entry 21230323:1000hrs - Chief Administration Officer";
         server.emit('message', JSON.stringify({"content": msgHeader, "from": 'Peter Garrett', "type": "text", "room": window.localStorage.getItem('my-room-ID')}));
+        setTimeout(function() {
+            var msg = "While digging out new tunnels on Level 8, our team made a remarkable discovery! The ruins of some ancient Alien Civilization.";
+            server.emit('message', JSON.stringify({"content": msg, "from": '', "type": "text", "room": window.localStorage.getItem('my-room-ID')}));
+            },3000);
+            setTimeout(function() {
+            var msg = "The science team has already begun excavation and exploration of the area. --END LOG";
+            server.emit('message', JSON.stringify({"content": msg, "from": '', "type": "text", "room": window.localStorage.getItem('my-room-ID')}));
+            },8000);
     });
 
+    // Face Huggers appear
     $("#21230325").on("click", function () {
-        var msg = "We discovered something alive in the ruins. These spider like creatures emerged from these egg sack looking things.";
-        server.emit('message', JSON.stringify({"content": msg, "from": user, "type": "text", "room": window.localStorage.getItem('my-room-ID')}));
+        var msgHeader = "Log Entry 21230327:1345hrs - Chief Administration Officer";
+        server.emit('message', JSON.stringify({"content": msgHeader, "from": 'Peter Garrett', "type": "text", "room": window.localStorage.getItem('my-room-ID')}));
+
+        setTimeout(function() {
+        var msg = "Update to Discovery. Several of our research personal have been injured by some for of alien creature.";
+        server.emit('message', JSON.stringify({"content": msg, "from": '', "type": "text", "room": window.localStorage.getItem('my-room-ID')}));
+        },3000);
+
+        setTimeout(function() {
+        var msg = "Some form of spider like creature emerged from small pods found within the site and attached to six researchers faces.";
+        server.emit('message', JSON.stringify({"content": msg, "from": '', "type": "text", "room": window.localStorage.getItem('my-room-ID')}));
+        },8000);
+
+        setTimeout(function() {
+        var msg = "Doctor Bashir has attempted to remove the creatures, but they release some sort of acid when cut causing severe wounds to the victim. ";
+        server.emit('message', JSON.stringify({"content": msg, "from": '', "type": "text", "room": window.localStorage.getItem('my-room-ID')}));
+        },11000);
+
+        setTimeout(function() {
+        var msg = "We will continue to monitor and update as the situation changes.. -- END LOG";
+        server.emit('message', JSON.stringify({"content": msg, "from": '', "type": "text", "room": window.localStorage.getItem('my-room-ID')}));
+        },14000);
     });
 
+    // Things are getting worse
     $("#21230405").on("click", function () {
-        var msg = "Final Log Entry. Everyone is dead. These monsters have killed everyone! God help me, there right outside the lab!";
-        server.emit('message', JSON.stringify({"content": msg, "from": user, "type": "text", "room": window.localStorage.getItem('my-room-ID')}));
+        var msgHeader = "Log Entry 21230405:2300hrs - Chief Administration Officer";
+        server.emit('message', JSON.stringify({"content": msgHeader, "from": 'Peter Garrett', "type": "text", "room": window.localStorage.getItem('my-room-ID')}));
+
+        setTimeout(function() {
+        var msg = "Several more men have been taken by these aptly named face-huggers while trying to learn more about these Aliens.";
+        server.emit('message', JSON.stringify({"content": msg, "from": '', "type": "text", "room": window.localStorage.getItem('my-room-ID')}));
+        },3000);
+
+        setTimeout(function() {
+        var msg = "In accordance with Doctor Bashir's advice, I've suspended all activity to the Site until we can make contact with the Company.";
+        server.emit('message', JSON.stringify({"content": msg, "from": '', "type": "text", "room": window.localStorage.getItem('my-room-ID')}));
+        },8000);
+
+        setTimeout(function() {
+        var msg = "The orginal six patients are making a recovery after the face-huggers suddenly died and released them.";
+        server.emit('message', JSON.stringify({"content": msg, "from": '', "type": "text", "room": window.localStorage.getItem('my-room-ID')}));
+        },11000);
+
+        setTimeout(function() {
+        var msg = "We will continue to monitor and update as the situation changes.. -- END LOG";
+        server.emit('message', JSON.stringify({"content": msg, "from": '', "type": "text", "room": window.localStorage.getItem('my-room-ID')}));
+        },14000);
     });
 
     var welcomeMessage = "Secure Connection Established to MainFrame [Site LC1413]";
